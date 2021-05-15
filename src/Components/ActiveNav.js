@@ -4,6 +4,8 @@ export const ActiveNav = name => {
       arr[i].classList.remove("active");
       arr[i].setAttribute("aria-current", "false");
     }
-    document.getElementById(name).classList.add("active");
-    document.getElementById(name).setAttribute("aria-current", "true");
+    if(name) {
+    	document.getElementById(name).classList.add("active");
+    	document.getElementById(name).setAttribute("aria-current", "true");
+    }
 }

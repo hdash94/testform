@@ -17,7 +17,9 @@ export default function SurveyComplete() {
       				For any further information, feel free to connect with us.<br /><br /><br />
       				<b>Contact Us</b><br />
       				Phone: <a href = "tel:+91-9969-969-969">+91-9969-969-969</a><br />
-      				Email: <a href="mailto:contactus@surveylegends.com"><small>contactus@surveylegends.com</small></a>
+      				Email: <a href="mailto:contactus@playful.com">
+                        <small>contactus@playful.com</small>
+                      </a>
       			</p>
       		</div>
       	</div>

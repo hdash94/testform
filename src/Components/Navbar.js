@@ -13,6 +13,7 @@ export default function Navbar() {
   }
 
   function changeToHome() {
+    ActiveNav(null);
     document.getElementById("navbarToggler").classList.remove("show");
     document.getElementById("navbar-toggle").classList.add("collapsed");
     document.getElementById("navbar-toggle").setAttribute("aria-expanded", "false");

@@ -1,7 +1,8 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
+import { connect } from 'react-redux';
 import FileInput from './FileInput';
-import history from '../history';
+import { createRequest } from '../actions';
 
 class FormRequest extends React.Component {
 
@@ -34,8 +35,7 @@ class FormRequest extends React.Component {
   }
 
 	onSubmit = formValues => {
-    history.push("/form-request-success");
-		console.log(formValues);
+		this.props.createRequest(formValues);
 	}
 
 	render() {
@@ -82,9 +82,9 @@ const validate = formValues => {
   return errors;
 };
 
-FormRequest = reduxForm({
+const formWrapped = reduxForm({
 	form: 'creatorForm',
   validate
 })(FormRequest);
 
-export default FormRequest;
+export default connect(null, { createRequest })(formWrapped);

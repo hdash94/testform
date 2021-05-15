@@ -14,6 +14,16 @@ export default function CraeteForm() {
 					<FormRequest />
 				</div>
 			</div>
+			<div className = "row text-center mt-5 mb-3">
+				<div className = "col">
+					<small>
+						*Pricing is subject to audience reach and medium of reach<br />
+						(i.e., through personalized emails, ads, etc.)<br/>
+						*Our business associate will contact you as soon as you<br />
+						fill-up the above details and submit the above form.
+					</small>
+				</div>
+			</div>
 		</div>
 	)
 }

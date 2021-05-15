@@ -1,6 +1,7 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
-import history from '../history';
+import { submitSurvey } from '../actions';
+import { connect } from 'react-redux';
 
 class FormPage extends React.Component {
 
@@ -33,8 +34,7 @@ class FormPage extends React.Component {
   }
 
 	onSubmit = formValues => {
-    history.push("/survey-complete");
-		console.log(formValues);
+		this.props.submitSurvey(formValues);
 	}
 
 	render() {
@@ -104,9 +104,9 @@ const validate = formValues => {
   return errors;
 };
 
-FormPage = reduxForm({
+const formWrapped = reduxForm({
 	form: 'audienceForm',
   validate
 })(FormPage);
 
-export default FormPage;
+export default connect(null, { submitSurvey })(formWrapped);

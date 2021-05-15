@@ -6,9 +6,24 @@ class FileInput extends React.Component {
     this.onChange = this.onChange.bind(this)
   }
 
-  onChange(e) {
+  getBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = error => reject(error);
+    });
+  }
+
+  onChange = async (e) => {
     const { input: { onChange } } = this.props
-    onChange(e.target.files[0])
+    var targetFile = e.target.files[0];
+    if(targetFile) {
+      const val = await this.getBase64(targetFile);
+      onChange(val);
+    } else {
+      onChange(null);
+    }
   }
 
   render() {

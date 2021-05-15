@@ -28,8 +28,8 @@ function App() {
             </main>
             <footer>
                 <div className = "d-flex justify-content-center text-center bg-dark text-white">
-                    <p>
-                         Copyright © 2021 Survey Legends All Rights Reserved.
+                    <p className = "m-1">
+                        Copyright © 2021 Survey Legends All Rights Reserved.
                         <br />
                         Created By "Enter Your Name Here"
                     </p>
