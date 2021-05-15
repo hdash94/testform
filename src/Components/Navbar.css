@@ -1,0 +1,7 @@
+@media (max-width: 1199.98px) { 
+ .brand {
+ 	margin: 0 auto;
+ 	display: table;
+ 	margin-right: auto !important;
+ }
+}
